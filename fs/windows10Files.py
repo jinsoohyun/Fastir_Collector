@@ -17,6 +17,9 @@ class Windows10Files(_FS):
     def _list_windows_prefetch(self):
         return super(Windows10Files, self)._list_windows_prefetch(True)
 
+	def _hosts_file(self):
+		return super(Windows10Files, self)._hosts_file('C:\\Windows\\System32\\drivers\\etc\\hosts')
+
     def _chrome_history(self):
         return super(Windows10Files, self)._chrome_history(
             '\\Users\*\\AppData\\Local\\Google\\Chrome\\User Data\\*\\History')
